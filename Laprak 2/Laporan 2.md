@@ -7,9 +7,7 @@ Materi ini membahas array, pointer, fungsi, dan prosedur dalam C++. Array adalah
 
 ## Guided
 
-### soal 1
-
-#### Call By Pointer
+### Soal 1 - Call By Pointer
 
 ```go
 #include <iostream>
@@ -38,9 +36,7 @@ int main()
 
 Program tersebut menggunakan pointer sebagai parameter untuk menukar nilai dua variabel. Fungsi menerima *px dan *py sebagai alamat a dan b, lalu menggunakan temp untuk menukarnya. Di main, tukar(&a, &b) dipanggil agar nilai asli a dan b berubah, sehingga hasilnya tertukar.
 
-### soal 2
-
-#### Call By Reference
+### soal 2 - Call By Reference
 
 ```go
 #include <iostream>
