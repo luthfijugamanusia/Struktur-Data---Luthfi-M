@@ -3,7 +3,7 @@
 
 ## Dasar Teori
 
-yang panjang dikit
+Materi ini membahas array, pointer, fungsi, dan prosedur dalam C++. Array adalah struktur data untuk menyimpan banyak nilai dalam satu wadah dengan indeks sebagai pengaksesnya. Pointer adalah variabel yang menyimpan alamat dari variabel lain, termasuk elemen array. Fungsi adalah sub-program yang dapat digunakan kembali dan dapat menerima input serta menghasilkan output, seperti fungsi main(). Jika fungsi tidak memiliki input, sering disebut sebagai prosedur.
 
 ## Guided
 
