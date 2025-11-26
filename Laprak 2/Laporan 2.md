@@ -1,5 +1,5 @@
 # <h1 align="center">Laporan Praktikum Modul X <br> Nama Modul</h1>
-<p align="center"> Luthfi Maolana Andhika W - 103112430181 </p>
+####<p align="center"> Luthfi Maolana Andhika W - 103112430181 </p>
 
 ## Dasar Teori
 
