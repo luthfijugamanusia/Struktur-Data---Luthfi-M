@@ -13,12 +13,18 @@ Pemrograman C++ adalah sebuah bahasa turunan atau pengembangan dari bahasa C, Pe
 Aritmatika
 
 ```go
-package main
-
-func main() {
-	fmt.Println("Kode kalian disini")
-	fmt.Println("JANGAN MASUKIN >>SCREENSHOT<< KODE KALIAN DISINI")
-	fmt.Println("KALAU ADA -20 POIN LAPRAK")
+#include <iostream>
+using namespace std;
+int main()
+{
+    int W, X, Y;
+    float Z;
+    X = 7;
+    Y = 3;
+    W = 1;
+    Z = (X + Y) / (Y + W);
+    cout << "Nilai z = " << Z << endl;
+    return 0;
 }
 ```
 
