@@ -35,7 +35,7 @@ int main()
 
 Program tersebut menggunakan pointer sebagai parameter untuk menukar nilai dua variabel. Fungsi menerima *px dan *py sebagai alamat a dan b, lalu menggunakan temp untuk menukarnya. Di main, tukar(&a, &b) dipanggil agar nilai asli a dan b berubah, sehingga hasilnya tertukar.
 
-### soal 2 - Call By Reference
+### Soal 2 - Call By Reference
 
 ```go
 #include <iostream>
@@ -60,8 +60,7 @@ int main()
 ```
 
 > Output
-> ![Screenshot bagian x](output/screenshot_soal1.png)
-> %% Untuk mencantumkan screenshot, tidak boleh ada spasi di urlnya `()`, penamaan file bebas asal gak sara dan mudah dipahami aja,, dan jangan lupa hapus komen ini yah%%
+> ![Screenshot output](foto/2.png)
 
 Program ini mirip dengan sebelumnya, tetapi menggunakan reference. Pada fungsi tukar(int &x, int &y), tanda & berarti variabel tersebut adalah referensi ke nilai asli, sehingga perubahan langsung mengubah variabel aslinya. Cara ini membuat pemanggilan lebih sederhana dibanding pointer.
 
@@ -82,8 +81,7 @@ func main() {
 ```
 
 > Output
-> ![Screenshot bagian x](output/screenshot_soal1.png)
-> %% Untuk mencantumkan screenshot, tidak boleh ada spasi di urlnya `()`, penamaan file bebas asal gak sara dan mudah dipahami aja,, dan jangan lupa hapus komen ini yah%%
+> ![Screenshot output](foto/3.png)
 
 Penjelasan ttg kode kalian disini
 
@@ -100,26 +98,12 @@ func main() {
 ```
 
 > Output
-> ![Screenshot bagian x](output/screenshot_soal2A.png)
+> ![Screenshot output](foto/4.png)
 
 penjelasan kode
 
 Kalau adalanjutan di lanjut disini aja
 
-soal nomor 2B
-
-```go
-package main
-
-func main() {
-	fmt.Println("kode untuk soal nomor 2B")
-}
-```
-
-> Output
-> ![Screenshot bagian x](output/screenshot_soal2B.png)
-
-penjelasan bedanya sesuai soal
 
 ## Referensi
 
