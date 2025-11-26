@@ -30,7 +30,6 @@ int main()
 }
 ```
 
-![imagealt](https://github.com/luthfijugamanusia/Struktur-Data---Luthfi-M/edit/main/Laprak%202/Laporan%202.md)
 
 Program tersebut menggunakan pointer sebagai parameter untuk menukar nilai dua variabel. Fungsi menerima *px dan *py sebagai alamat a dan b, lalu menggunakan temp untuk menukarnya. Di main, tukar(&a, &b) dipanggil agar nilai asli a dan b berubah, sehingga hasilnya tertukar.
 
