@@ -4,13 +4,13 @@
 
 ## Dasar Teori
 
-yang panjang dikit
+Pemrograman C++ adalah sebuah bahasa turunan atau pengembangan dari bahasa C, Pemrograman ini dapat digunakan untuk berbagai jenis pengembangan perangkat lunak, memiliki performa yang tinggi sehingga dapat digunakan secara lebih efisien ketika membuat sebuah perangkat lunak.
 
 ## Guided
 
 ### soal 1
 
-aku mengerjakan perulangan
+Aritmatika
 
 ## Unguided
 
