@@ -134,11 +134,10 @@ int main() {
 > Output
 > ![Screenshot output](foto/4.png)
 
-penjelasan kode
-
 Program tersebut menggunakan call by reference untuk mengkuadratkan sebuah bilangan. Nilai awal angka = 5, lalu prosedur kuadrat(&x) melakukan x = x * x. Output pertama menampilkan nilai awal, dan setelah prosedur dipanggil, output kedua menampilkan nilai yang sudah dikuadratkan.
 
 
 ## Referensi
 
 1. https://www.programiz.com/cpp-programming/pointers-arrays (diakses 26/11/26)
+2. https://www.w3schools.com/cpp/default.asp (diakses 26/11/26)
