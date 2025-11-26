@@ -68,32 +68,66 @@ Program ini mirip dengan sebelumnya, tetapi menggunakan reference. Pada fungsi t
 
 ### Soal 1
 
-copy paste soal nomor 1 disini
-
 ```go
-package main
+#include <iostream>
+using namespace std;
 
-func main() {
-	fmt.Println("Kode kalian disini")
-	fmt.Println("JANGAN MASUKIN >>SCREENSHOT<< KODE KALIAN DISINI")
-	fmt.Println("KALAU ADA -20 POIN LAPRAK")
+int main(){
+    int matriks[3][3] = {
+        {1, 2, 3,},
+        {4, 5, 6,},
+        {7, 8, 9,}
+    };
+
+    int transpose[3][3];
+
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            transpose[j][i] = matriks[i][j];  
+        }
+    }
+
+    cout << "matriks awal:" << endl;
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            cout << matriks[i][j] << " ";
+        }
+        cout << endl;
+    }
+    cout << "matriks hasil tranpose" << endl;
+    for (int i = 0; i<3; i++){
+        for (int j = 0; j<3; j++){
+            cout << transpose[i][j] << " ";
+        }
+        cout << endl;
+    }
+    return 0;
 }
 ```
 
 > Output
 > ![Screenshot output](foto/3.png)
 
-Penjelasan ttg kode kalian disini
+Program tersebut melakukan transpose matriks 3×3. Pertama, matriks awal diinisiasi, kemudian dibuat matriks kosong untuk menampung hasil transpose. Dua loop digunakan untuk menukar baris menjadi kolom. Setelah itu, program mencetak matriks awal dan matriks hasil transpose menggunakan dua loop untuk setiap baris.
 
 ### Soal 2
 
-soal nomor 2A
-
 ```go
-package main
+#include <iostream>
+using namespace std;
 
-func main() {
-	fmt.Println("kode untuk soal nomor 2A")
+void kuadrat(int &x) {
+    x = x * x; 
+}
+
+int main() {
+    int angka = 5; 
+    cout << "Nilai awal: " << angka << endl;
+
+    kuadrat(angka); 
+
+    cout << "Nilai setelah dikuadratkan: " << angka << endl;
+    return 0;
 }
 ```
 
@@ -102,9 +136,9 @@ func main() {
 
 penjelasan kode
 
-Kalau adalanjutan di lanjut disini aja
+Program tersebut menggunakan call by reference untuk mengkuadratkan sebuah bilangan. Nilai awal angka = 5, lalu prosedur kuadrat(&x) melakukan x = x * x. Output pertama menampilkan nilai awal, dan setelah prosedur dipanggil, output kedua menampilkan nilai yang sudah dikuadratkan.
 
 
 ## Referensi
 
-1. https://en.wikipedia.org/wiki/Data_structure (diakses blablabla)
+1. https://www.programiz.com/cpp-programming/pointers-arrays (diakses 26/11/26)
