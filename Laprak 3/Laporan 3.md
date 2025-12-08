@@ -1,9 +1,9 @@
-# <h1 align="center">Laporan Praktikum Modul X <br> Nama Modul</h1>
+# <h1 align="center">Laporan Praktikum Modul X <br> ABSTARCT DATA TYPE</h1>
 <p align="center"> Luthfi Maolana Andhika W - 103112430181 </p>
 
 ## Dasar Teori
 
-yang panjang dikit
+Abstract data type adalah sebuah model dari tipe data yang ditentukan dalam sudut pandang pengguna. adt menjelaskan apa yang dilakukan oleh tipe data. Komponen utama ADT ada dua yaitu data yang akan disimpan dan operasinya. Contoh ADT umum adalah Stack(pop,peek,isEmpty,isFull), Queue, List, Tree, Map/Dictionary
 
 ## Guided
 
