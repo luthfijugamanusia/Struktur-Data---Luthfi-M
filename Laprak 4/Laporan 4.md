@@ -336,7 +336,7 @@ int main() {
 
 ```
 
-> ![foto](foto/UG2.png)
+> ![foto](foto/UG3.png)
 
 Pada program tersebut, kita membuat sebuah program untuk membalik urutan angka menggunakan single linked list. Kita mendefinisikan sebuah struct yang berisi data bertipe int serta pointer ke node berikutnya. Program ini memiliki fungsi tambahData, tampilkan, dan reverse yang berfungsi untuk membalik urutan list.
 
