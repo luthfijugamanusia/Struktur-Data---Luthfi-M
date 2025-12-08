@@ -172,16 +172,78 @@ void printSingleLinkedList(){
 
 int main(){
 
-  createSingleLinkedList("One Piece", "Eiichiro Oda", 1999);
+  createSingleLinkedList("Kata", "Geez & Aan", 2018);
 
   printSingleLinkedList();
+
+  cout << "\n\n" << endl;
+
+  addFirst("Dia adalah Kakakku", "Tere Liye", 2009);
+
+  printSingleLinkedList();
+  
+  cout << "\n\n" << endl;
+
+  addLast("Aroma Karsa", "Dee Lestari", 2018);
+
+  printSingleLinkedList();
+  
+  cout << "\n\n" << endl;
+
+  removeFirst();
+
+  printSingleLinkedList();
+  
+  cout << "\n\n" << endl;
+
+  addLast("11.11", "Fiersa Besari", 2018);
+
+  printSingleLinkedList();
+  
+  cout << "\n\n" << endl;
+
+  removeLast();
+
+  printSingleLinkedList();
+  
+  cout << "\n\n" << endl;
+
+  changeFirst("Berhenti di Kamu", "Gia Pratama", 2018);
+
+  printSingleLinkedList();
+  
+  cout << "\n\n" << endl;
+
+  addMiddle("Bumi Manusia", "Pramoedya Anata Toer", 2005, 2);
+
+  printSingleLinkedList();
+  
+  cout << "\n\n" << endl;
+
+  addMiddle("Negeri 5 Menara", "Ahmad Fuadi", 2009, 2);
+
+  printSingleLinkedList();
+  
+  cout << "\n\n" << endl;
+
+  removeMiddle(5);
+
+  printSingleLinkedList();
+  
+  cout << "\n\n" << endl;
+
+  changeMiddle("Sang Pemimpi", "Andrea Hirata", 2006, 2);
+
+  printSingleLinkedList();
+  
+  cout << "\n\n" << endl;
 
 }
 ```
 
 > ![foto](foto/UG1.png)
 
-Kode ini membuat sebuah single linked list untuk menyimpan data buku, lengkap dengan fungsi untuk membuat list pertama, menambah data (di awal, tengah, atau akhir), menghapus data, mengubah data, menghitung jumlah data, serta menampilkan seluruh isi list; setiap node berisi judul, pengarang, tahun terbit, dan pointer ke node berikutnya, sementara fungsi main() hanya membuat satu buku awal dan menampilkannya.
+Program ini membuat dan mengelola single linked list berisi data buku, lalu di main() dilakukan serangkaian operasi seperti menambah buku di awal, tengah, atau akhir; menghapus buku pertama, terakhir, atau posisi tertentu; mengubah data buku; serta mencetak seluruh isi list setelah setiap operasi, sehingga setiap langkah perubahan pada linked list bisa terlihat hasilnya.
 
 ## Referensi
 
