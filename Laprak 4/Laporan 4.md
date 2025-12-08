@@ -187,67 +187,161 @@ return 0;
 ```
 
 > Output
-> ![Screenshot bagian x](output/screenshot_soal1.png)
-> %% Untuk mencantumkan screenshot, tidak boleh ada spasi di urlnya `()`, penamaan file bebas asal gak sara dan mudah dipahami aja,, dan jangan lupa hapus komen ini yah%%
+> ![Foto](foto/G1.png)
 
-Penjelasan ttg kode kalian disini
+Pada program tersebut, kita diminta membuat sebuah list dengan beberapa operasi menggunakan singly linked list. Kita membuat sebuah struct yang berisi data yang akan disimpan serta pointer menuju node berikutnya. Kemudian, kita mengimplementasikan fungsi insert depan, insert belakang, dan insert setelah. Fungsi insert setelah digunakan untuk menambahkan data baru tepat setelah data tertentu yang dipilih. Selain itu, kita juga membuat fungsi hapus, update, dan tampilkan list; fungsi update digunakan untuk mengganti data pada node yang dipilih dengan data yang baru.
+
+Pada fungsi main, kita menggunakan struktur switch-case dengan pilihan 1–6 untuk menjalankan fungsi-fungsi yang telah dibuat, serta pilihan 0 untuk mengakhiri program.
 
 ## Unguided
 
 ### Soal 1
 
-copy paste soal nomor 1 disini
+buatlah single linked list untuk Antrian yang menyimpan data pembeli( nama dan pesanan). program memiliki beberapa menu seperti tambah antrian, layani antrian(hapus), dan tampilkan antrian. *antrian pertama harus yang pertama dilayani
 
 ```go
-package main
+#include <iostream>
+#include <string>
+using namespace std;
 
-func main() {
-	fmt.Println("Kode kalian disini")
-	fmt.Println("JANGAN MASUKIN >>SCREENSHOT<< KODE KALIAN DISINI")
-	fmt.Println("KALAU ADA -20 POIN LAPRAK")
+struct Node {
+    string nama, pesanan;
+    Node* next;
+};
+
+Node* front = nullptr;
+Node* rear = nullptr;
+
+bool kosong() { return front == nullptr; }
+
+void tambah(string nama, string pesanan) {
+    Node* baru = new Node{nama, pesanan, nullptr};
+    if (kosong()) front = rear = baru;
+    else rear = rear->next = baru;
+    cout << nama << " ditambahkan ke antrian.\n";
 }
+
+void layani() {
+    if (kosong()) { cout << "Antrian kosong!\n"; return; }
+    Node* hapus = front;
+    cout << "Melayani " << hapus->nama << " - " << hapus->pesanan << endl;
+    front = front->next;
+    if (!front) rear = nullptr;
+    delete hapus;
+}
+
+void tampil() {
+    if (kosong()) { cout << "Antrian kosong!\n"; return; }
+    Node* temp = front;
+    cout << "\nDaftar Antrian:\n";
+    while (temp) {
+        cout << "- " << temp->nama << " : " << temp->pesanan << endl;
+        temp = temp->next;
+    }
+}
+
+int main() {
+    int pil; string nama, pesanan;
+    do {
+        cout << "\n1. Tambah Antrian\n2. Layani Antrian\n3. Tampilkan Antrian\n0. Keluar\nPilih: ";
+        cin >> pil; cin.ignore();
+        if (pil == 1) { cout << "Nama: "; getline(cin, nama); cout << "Pesanan: "; getline(cin, pesanan); tambah(nama, pesanan); }
+        else if (pil == 2) layani();
+        else if (pil == 3) tampil();
+    } while (pil != 0);
+}
+
 ```
 
-> Output
-> ![Screenshot bagian x](output/screenshot_soal1.png)
-> %% Untuk mencantumkan screenshot, tidak boleh ada spasi di urlnya `()`, penamaan file bebas asal gak sara dan mudah dipahami aja,, dan jangan lupa hapus komen ini yah%%
+> ![foto](foto/UG1.png)
 
-Penjelasan ttg kode kalian disini
+Pada program tersebut, kita membuat sebuah list dengan beberapa operasi menggunakan single linked list. Kita mendefinisikan sebuah struct yang menyimpan data berupa string untuk nama dan pesanan, serta pointer ke node berikutnya. Program ini menggunakan library <string>, dan class Antrian dibuat sebagai public agar dapat diakses oleh fungsi main.
 
+Selanjutnya, kita membuat fungsi tambahAntrian, layaniAntrian, dan tampilkanAntrian. Pada fungsi main, digunakan struktur switch-case untuk memilih dan menjalankan fungsi antrian yang diinginkan.
 ### Soal 2
 
-soal nomor 2A
+buatlah program kode untuk membalik (reverse) singly linked list (1-2-3 menjadi 3-2-1)
+
 
 ```go
-package main
+#include <iostream>
+using namespace std;
 
-func main() {
-	fmt.Println("kode untuk soal nomor 2A")
+struct Node {
+    int data;
+    Node* next;
+};
+
+Node* head = nullptr;
+
+void tambahBelakang(int data) {
+    Node* baru = new Node{data, nullptr};
+    if (head == nullptr)
+        head = baru;
+    else {
+        Node* temp = head;
+        while (temp->next != nullptr)
+            temp = temp->next;
+        temp->next = baru;
+    }
 }
+
+void tampil() {
+    if (head == nullptr) {
+        cout << "List kosong!\n";
+        return;
+    }
+    Node* temp = head;
+    while (temp != nullptr) {
+        cout << temp->data << " -> ";
+        temp = temp->next;
+    }
+    cout << "NULL\n";
+}
+
+void balikList() {
+    Node *prev = nullptr, *curr = head, *next = nullptr;
+    while (curr != nullptr) {
+        next = curr->next;
+        curr->next = prev;
+        prev = curr;
+        curr = next;
+    }
+    head = prev;
+    cout << "Linked list berhasil dibalik!\n";
+}
+
+int main() {
+    int n, data;
+
+    cout << "Masukkan jumlah elemen linked list: ";
+    cin >> n;
+
+    for (int i = 0; i < n; i++) {
+        cout << "Masukkan data ke-" << i + 1 << ": ";
+        cin >> data;
+        tambahBelakang(data);
+    }
+
+    cout << "\nLinked list sebelum dibalik:\n";
+    tampil();
+
+    balikList();
+
+    cout << "\nLinked list setelah dibalik:\n";
+    tampil();
+
+    return 0;
+}
+
 ```
 
-> Output
-> ![Screenshot bagian x](output/screenshot_soal2A.png)
+> ![foto](foto/UG2.png)
 
-penjelasan kode
+Pada program tersebut, kita membuat sebuah program untuk membalik urutan angka menggunakan single linked list. Kita mendefinisikan sebuah struct yang berisi data bertipe int serta pointer ke node berikutnya. Program ini memiliki fungsi tambahData, tampilkan, dan reverse yang berfungsi untuk membalik urutan list.
 
-Kalau adalanjutan di lanjut disini aja
-
-soal nomor 2B
-
-```go
-package main
-
-func main() {
-	fmt.Println("kode untuk soal nomor 2B")
-}
-```
-
-> Output
-> ![Screenshot bagian x](output/screenshot_soal2B.png)
-
-penjelasan bedanya sesuai soal
+Di dalam fungsi main, kita menggunakan data dummy sebagai isi list, kemudian program menampilkan urutan angka sebelum dibalik dan setelah dibalik.
 
 ## Referensi
 
-1. https://en.wikipedia.org/wiki/Data_structure (diakses blablabla)
+1. https://www.w3schools.com (diakses 8 Desember 2025)
