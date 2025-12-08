@@ -9,7 +9,53 @@ Abstract data type adalah sebuah model dari tipe data yang ditentukan dalam sudu
 
 ### soal 1
 
-aku mengerjakan perulangan
+File MAHASISWA_H_INCLUDED berfungsi sebagai kontrak (interface) untuk modul mahasiswa dalam program C++, dilindungi oleh header guard untuk mencegah pendefinisian ganda. File ini mendefinisikan struktur data mahasiswa yang terdiri dari NIM (char nim[10]), dan dua nilai integer (nilai1 dan nilai2). Selain struktur, file ini mendeklarasikan dua prototipe fungsi: void inputMhs(mahasiswa &m) yang memungkinkan pengguna mengisi data mahasiswa (menggunakan referensi untuk memodifikasi objek), dan float rata2(mahasiswa m) yang bertugas menghitung dan mengembalikan hasil rata-rata dari kedua nilai tersebut dalam tipe data floating point.
+
+```go
+#ifndef MAHASISWA_H_INCLUDED
+#define MAHASISWA_H_INCLUDED
+
+struct mahasiswa
+{
+ char nim[10];
+ int nilai1, nilai2;
+};
+
+void inputMhs(mahasiswa &m);
+float rata2(mahasiswa m);
+
+#endif
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include "mahasiswa.h"
+#include <iostream>
+using namespace std;
+
+void inputMhs(mahasiswa &m)
+{
+cout << "input nama = ";
+cin >> (m) .nim;
+cout << "input nilai = ";
+cin >> (m) .nilai1;
+cout << "input niali2 = ";
+cin >> m .nilai2;
+
+}
+float rata2(mahasiswa m)
+{
+return float(m.nilai1 + m.nilai2) / 2;
+}
+
+```
+
+> Output
+> ![foto](foto/Guided1.png)
+
+Penjelasan ttg kode kalian disini
+
+
+
 
 ## Unguided
 
