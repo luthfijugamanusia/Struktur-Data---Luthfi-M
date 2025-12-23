@@ -1,4 +1,4 @@
-# <h1 align="center">Laporan Praktikum Modul 8 <br> </h1>
+# <h1 align="center">Laporan Praktikum Modul 10 <br> </h1>
 <p align="center"> Luthfi Maolana Andhika W - 103112430181 </p>
 
 ## Dasar Teori
